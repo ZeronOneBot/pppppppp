@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jester Obfuscator</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/javascript-obfuscator/dist/index.browser.js"></script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Jester Obfuscator</h1>
+      <p>Protect your JavaScript code with advanced obfuscation</p>
+      <p class="credits">By JesterNovaZ | Contact: <a href="https://t.me/JesterNovaZ" target="_blank">Telegram</a> | <a href="https://youtube.com/@jesternovaz" target="_blank">YouTube</a></p>
+    </header>
+
+    <main>
+      <div class="upload-section">
+        <label for="fileInput" class="file-upload-label">
+          <span id="fileName">Pilih File JavaScript (.js)</span>
+          <input type="file" id="fileInput" accept=".js">
+        </label>
+      </div>
+
+      <div class="options-section">
+        <h2>Obfuscation Presets</h2>
+        <div class="preset-buttons">
+          <button id="galaxyBtn" class="preset-btn active">Galaxy</button>
+          <button id="novaBtn" class="preset-btn">Nova</button>
+          <button id="strangeBtn" class="preset-btn">Strange</button>
+          <button id="customBtn" class="preset-btn">Custom</button>
+        </div>
+
+        <div id="customOptions" class="hidden">
+          <div class="option">
+            <label>
+              <input type="text" id="customString" placeholder="Custom prefix (optional)">
+              Custom Prefix
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <div class="action-section">
+        <button id="obfuscateBtn" disabled>Obfuscate Code</button>
+        <button id="downloadBtn" disabled>Download Obfuscated File</button>
+      </div>
+
+      <div class="code-section">
+        <div class="code-container">
+          <h3>Original Code</h3>
+          <pre id="originalCode">No file uploaded yet...</pre>
+        </div>
+        <div class="code-container">
+          <h3>Obfuscated Code</h3>
+          <pre id="obfuscatedCode">Obfuscated code will appear here...</pre>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p>© 2023 Jester Obfuscator | Developer: <a href="https://wa.me/601153232217" target="_blank">WhatsApp</a></p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
